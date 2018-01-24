@@ -1,3 +1,10 @@
+
+## Mr Emoji 
+It's a fork of emoji-mart. A main purpose of using this package is to reduce your package size. With emoji-mart bundle sizes will be around 500kb+ (minified).
+We have removed few things like, there will be only Apple icons available and you can not change the skin of emoji. We have added Parser to detect text with emoji.
+
+## Installation
+
 <div align="center">
   <br><b>Mr Emoji</b> is a Slack-like customizable<br>emoji picker component for React
   <br><a href="https://missive.github.io/emoji-mart">Demo</a> • <a href="https://github.com/missive/emoji-mart/releases">Changelog</a>
@@ -6,8 +13,6 @@
   <br>Brought to you by the <a title="Team email, team chat, team tasks, one app" href="https://missiveapp.com">Missive</a> team
 </div>
 
-## Mr Emoji is a fork of emoji-mart that only supports apple emojis, and it's sole purpose is to reduce package size
-## Installation
 
 `npm install --save mr-emoji`
 
@@ -64,6 +69,16 @@ categories: {
   flags: 'Flags',
   custom: 'Custom',
 }
+```
+
+### Parser
+```jsx
+import { Parser } from 'mr-emoji'
+
+<Parser text={"Hello there!"} />
+<Parser text={"Hello there! :grinning:"} />
+<Parser text={"Hello there! :grinning: Nice to meet you."} />
+
 ```
 
 #### Sheet sizes
