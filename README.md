@@ -75,9 +75,9 @@ categories: {
 ```jsx
 import { Parser } from 'mr-emoji'
 
-<Parser text={"Hello there!"} />
-<Parser text={"Hello there! :grinning:"} />
-<Parser text={"Hello there! :grinning: Nice to meet you."} />
+<Parser data="Hello there!" />
+<Parser data="Hello there! :grinning:" />
+<Parser data="Hello there! :grinning: Nice to meet you." />
 
 ```
 
@@ -90,26 +90,6 @@ Sheets are served from [unpkg](https://unpkg.com), a global CDN that serves file
 | apple     | 20        | 459 KB   |
 | apple     | 32        | 1.08 MB  |
 | apple     | 64        | 2.94 MB  |
-| emojione  | 16        | 315 KB   |
-| emojione  | 20        | 435 KB   |
-| emojione  | 32        | 1020 KB  |
-| emojione  | 64        | 2.33 MB  |
-| facebook  | 16        | 322 KB   |
-| facebook  | 20        | 439 KB   |
-| facebook  | 32        | 1020 KB  |
-| facebook  | 64        | 2.5 MB   |
-| google    | 16        | 301 KB   |
-| google    | 20        | 409 KB   |
-| google    | 32        | 907 KB   |
-| google    | 64        | 2.17 MB  |
-| messenger | 16        | 325 KB   |
-| messenger | 20        | 449 MB   |
-| messenger | 32        | 1.05 MB  |
-| messenger | 64        | 2.69 MB  |
-| twitter   | 16        | 288 KB   |
-| twitter   | 20        | 389 KB   |
-| twitter   | 32        | 839 KB   |
-| twitter   | 64        | 1.82 MB  |
 
 #### Examples of `emoji` object:
 ```js
@@ -166,10 +146,8 @@ import { Emoji } from 'mr-emoji'
 | **onLeave** | | | Params: `(emoji, event) => {}` |
 | **onOver** | | | Params: `(emoji, event) => {}` |
 | [**fallback**](#unsupported-emojis-fallback) | | | Params: `(emoji) => {}` |
-| **set** | | `apple` | The emoji set: `'apple', 'google', 'twitter', 'emojione'` |
 | **sheetSize** | | `64` | The emoji [sheet size](#sheet-sizes): `16, 20, 32, 64` |
 | **backgroundImageFn** | | ```((set, sheetSize) => `https://unpkg.com/emoji-datasource@3.0.0/sheet_${set}_${sheetSize}.png`)``` | A Fn that returns that image sheet to use for emojis. Useful for avoiding a request if you have the sheet locally. |
-| **skin** | | `1` | Skin color: `1, 2, 3, 4, 5, 6` |
 | **tooltip** | | `false` | Show emoji short name when hovering (title) |
 | [**html**](#using-with-dangerouslysetinnerhtml) | | `false` | Returns an HTML string to use with `dangerouslySetInnerHTML` |
 
@@ -180,7 +158,6 @@ To have the component render `:shrug:` you would need to:
 
 ```js
 <Emoji
-  set={'messenger'}
   emoji={'shrug'}
   size={24}
   fallback={(emoji) => {

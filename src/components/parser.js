@@ -1,4 +1,6 @@
 import React from 'react'
+import Emoji from "./emoji";
+import PropTypes from 'prop-types'
 
 export default class Parser extends React.PureComponent {
     constructor(props) {
@@ -6,12 +8,8 @@ export default class Parser extends React.PureComponent {
     }
 
     colonsToUnicode(text) {
-        if(text){
-            return "";
-        }
         const colonsRegex = new RegExp('(^|)(:[a-zA-Z0-9-_+]+:(:skin-tone-[2-6]:)?)', 'g');
         let newText = [];
-
         let match;
         let obj = [];
         while (match = colonsRegex.exec(text)) { // eslint-disable-line
@@ -35,7 +33,7 @@ export default class Parser extends React.PureComponent {
             if(newText.length === 0){
                 newText.push(text.substring(0,obj[i].offset));
             }
-            newText.push(<Emoji emoji={obj[i].colons} sheetSize={Config.EmojiSize} size={16} apple = {true} key={i}>{obj[i].colons}</Emoji>);
+            newText.push(<Emoji emoji={obj[i].colons} sheetSize={16} size={16} apple = {true} key={i}>{obj[i].colons}</Emoji>);
             // text between two emojis
             let emojiPointerEnds = obj[i].offset + obj[i].length;
             if(!!obj[i+1] && obj[i+1].offset > emojiPointerEnds){
@@ -50,11 +48,16 @@ export default class Parser extends React.PureComponent {
     }
 
     render() {
-        const { text } = this.props;
+        const { data } = this.props;
         return (
             <div>
-                {this.colonsToUnicode(text)}
+                <div> {data} </div>
+                {this.colonsToUnicode(data)}
             </div>
         )
     }
+}
+
+Parser.propTypes = {
+    text: PropTypes.string
 }
