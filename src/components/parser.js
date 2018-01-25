@@ -51,7 +51,6 @@ export default class Parser extends React.PureComponent {
         const { data } = this.props;
         return (
             <div>
-                <div> {data} </div>
                 {this.colonsToUnicode(data)}
             </div>
         )
