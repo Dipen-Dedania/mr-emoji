@@ -1,7 +1,12 @@
 
 ## Mr Emoji 
-It's a fork of emoji-mart. A main purpose of using this package is to reduce your package size. With emoji-mart bundle sizes will be around 500kb+ (minified).
-We have removed few things like, there will be only Apple icons available and you can not change the skin of emoji. We have added Parser to detect text with emoji.
+It's a fork of emoji-mart. A main purpose of using this package is to reduce your package size. 
+With emoji-mart, bundle sizes will be around <b>600kb+ (minified)</b>. 
+With mr-emoji, bundle sizes will be around <b>250kb (minified)</b>. And you will have pretty icons too.
+We have removed few things like, there will be only Apple icons available and you can not change the skin of emoji. 
+We have added Parser to detect text with emoji.
+
+### Smile, you are saving 350kb+ bundle size :)
 
 ## Installation
 
