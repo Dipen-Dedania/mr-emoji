@@ -6,6 +6,8 @@ With mr-emoji, bundle sizes will be around <b>250kb (minified)</b>. And you will
 We have removed few things like, there will be only Apple icons available and you can not change the skin of emoji. 
 We have added Parser to detect text with emoji.
 
+[![Known Vulnerabilities](https://snyk.io/test/github/dipen-dedania/mr-emoji/badge.svg?targetFile=package.json)](https://snyk.io/test/github/dipen-dedania/mr-emoji?targetFile=package.json)
+
 ### Smile, you are saving 350kb+ bundle size :)
 
 ## Installation
