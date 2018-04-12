@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import { Emoji, Skins } from '.'
+import { Emoji} from '.'
 import { getData } from '../utils'
 
 export default class Preview extends React.PureComponent {
@@ -67,9 +67,9 @@ export default class Preview extends React.PureComponent {
             <span className="emoji-mart-title-label">{title}</span>
           </div>
 
-          <div className="emoji-mart-preview-skins">
-            <Skins {...skinsProps} />
-          </div>
+          {/*<div className="emoji-mart-preview-skins">*/}
+            {/*<Skins {...skinsProps} />*/}
+          {/*</div>*/}
         </div>
       )
     }

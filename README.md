@@ -55,7 +55,7 @@ import { Picker } from 'mr-emoji'
 | **emojisToShowFilter** | | ```((emoji) => true)``` | A Fn to choose whether an emoji should be displayed or not |
 | **showPreview** | | `true` | Display preview section |
 | **emojiTooltip** | | `false` | Show emojis short name when hovering (title) |
-| **skin** | | `1` | Default skin color: `1, 2, 3, 4, 5, 6` |
+| **skin** | | `1` | Default skin color: `1` |
 | **style** | | | Inline styles applied to the root element. Useful for positioning |
 | **title** | | `Emoji Mart™` | The title shown when no emojis are hovered |
 
@@ -218,7 +218,7 @@ emojiIndex.search('christmas').map((o) => o.native)
 ```
 
 ## Storage
-By default EmojiMart will store user chosen skin and frequently used emojis in `localStorage`. That can however be overwritten should you want to store these in your own storage.
+By default MrEmoji will store user chosen skin and frequently used emojis in `localStorage`. That can however be overwritten should you want to store these in your own storage.
 
 ```js
 import { store } from 'mr-emoji'
