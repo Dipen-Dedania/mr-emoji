@@ -2,7 +2,7 @@
   "name": "mr-emoji",
   "version": "1.1.4",
   "description": "Customizable Slack-like emoji picker for React",
-  "main": "dist/index.js",
+  "main": "dist-es/index.js",
   "module": "dist-es/index.js",
   "repository": {
     "type": "git",
