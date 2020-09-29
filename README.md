@@ -7,6 +7,7 @@ We have removed few things like, there will be only Apple icons available and yo
 We have added Parser to detect text with emoji.
 
 [![Known Vulnerabilities](https://snyk.io/test/github/dipen-dedania/mr-emoji/badge.svg?targetFile=package.json)](https://snyk.io/test/github/dipen-dedania/mr-emoji?targetFile=package.json)
+[![NPM](https://img.shields.io/npm/v/mr-emoji.svg)](https://www.npmjs.com/package/mr-emoji) 
 
 ### Smile, you are saving 350kb+ bundle size :)
 
